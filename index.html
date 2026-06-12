@@ -597,9 +597,17 @@ music.addEventListener("ended", async () => {
 
   loadSong(currentSongIndex);
 
+  try {
+    await music.play();
+    musicBtn.textContent = "❚❚";
+  } catch {
+    musicBtn.textContent = "▶";
+  }
+});
+
 enter.addEventListener("click", async () => {
   enter.classList.add("hide");
-  
+
   try {
     await music.play();
     musicBtn.textContent = "❚❚";
