@@ -513,10 +513,7 @@ button {
       </a>
     </nav>
 
-    <div class="views">
-👁
-<img src="https://visitor-badge.laobi.icu/badge?page_id=ryan98990.c91-chris" alt="views">
-</div>
+   <div class="views">👁 <span id="viewCount">580</span></div>
 
     </main>
 
@@ -612,11 +609,13 @@ function formatTime(seconds) {
 }
 
 fetch("https://api.countapi.xyz/hit/c91-chris/views")
-.then(res => res.json())
-.then(data => {
-    viewCount.textContent = data.value;
-});
-
+  .then(res => res.json())
+  .then(data => {
+    viewCount.textContent = 580 + data.value;
+  })
+  .catch(() => {
+    viewCount.textContent = "580";
+  });
 // 雪花
 const canvas = document.getElementById("snow");
 const ctx = canvas.getContext("2d");
