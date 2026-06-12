@@ -611,10 +611,10 @@ function formatTime(seconds) {
   return m + ":" + s;
 }
 
-fetch("https://api.countapi.xyz/hit/c91-chris/views")
+fetch("https://api.counterapi.dev/v1/c91-chris/views/up")
   .then(res => res.json())
   .then(data => {
-    viewCount.textContent = 580 + data.value;
+    viewCount.textContent = 580 + data.count;
   })
   .catch(() => {
     viewCount.textContent = "580";
