@@ -605,6 +605,17 @@ music.addEventListener("ended", async () => {
   }
 });
 
+enter.addEventListener("click", async () => {
+  enter.classList.add("hide");
+
+  try {
+    await music.play();
+    musicBtn.textContent = "❚❚";
+  } catch {
+    musicBtn.textContent = "▶";
+  }
+});
+  
 musicBtn.addEventListener("click", async () => {
   if (music.paused) {
     try {
