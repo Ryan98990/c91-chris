@@ -545,7 +545,7 @@ button {
   </p>
 </section>
 
-<audio id="music" src="music.mp3" preload="metadata" loop></audio>
+<audio id="music" preload="metadata"></audio>
 
 </div>
 
@@ -557,6 +557,17 @@ const progress = document.getElementById("progress");
 const current = document.getElementById("current");
 const duration = document.getElementById("duration");
 const viewCount = document.getElementById("viewCount");
+
+  const playlist = [
+  "music1.mp3",
+  "music2.mp3",
+  "music3.mp3"
+];
+
+const randomSong =
+  playlist[Math.floor(Math.random() * playlist.length)];
+
+music.src = randomSong;
 
 enter.addEventListener("click", async () => {
   enter.classList.add("hide");
