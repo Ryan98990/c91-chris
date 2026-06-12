@@ -594,6 +594,8 @@ function loadSong(index) {
   music.src = song.file;
   document.getElementById("songName").textContent = song.name;
 
+  document.getElementById("coverImg").src = song.cover;
+
   current.textContent = "0:00";
   duration.textContent = "0:00";
   progress.style.width = "0%";
