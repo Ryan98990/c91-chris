@@ -513,7 +513,10 @@ button {
       </a>
     </nav>
 
-    <div class="views">👁 <span id="viewCount">0</span></div>
+    <div class="views">
+👁
+<img src="https://visitor-badge.laobi.icu/badge?page_id=ryan98990.c91-chris" alt="views">
+</div>
 
     </main>
 
@@ -608,11 +611,11 @@ function formatTime(seconds) {
   return m + ":" + s;
 }
 
-// 本機訪問數：每打開一次 +1
-let views = Number(localStorage.getItem("views") || "580");
-views++;
-localStorage.setItem("views", views);
-viewCount.textContent = views;
+fetch("https://api.countapi.xyz/hit/c91-chris/views")
+.then(res => res.json())
+.then(data => {
+    viewCount.textContent = data.value;
+});
 
 // 雪花
 const canvas = document.getElementById("snow");
