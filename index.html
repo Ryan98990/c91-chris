@@ -543,7 +543,8 @@ button {
       </div>
     </div>
 
-    <button class="music-btn" id="musicBtn">▶</button>
+   <button class="music-btn prev-btn" id="prevBtn">⏮</button>
+<button class="music-btn" id="musicBtn">▶</button>
 <button class="music-btn next-btn" id="nextBtn">⏭</button>
   </section>
 
@@ -560,6 +561,7 @@ const enter = document.getElementById("enter");
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("musicBtn");
 const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
 const progress = document.getElementById("progress");
 const current = document.getElementById("current");
 const duration = document.getElementById("duration");
@@ -633,6 +635,23 @@ musicBtn.addEventListener("click", async () => {
     }
   } else {
     music.pause();
+    musicBtn.textContent = "▶";
+  }
+});
+
+  prevBtn.addEventListener("click", async () => {
+  currentSongIndex--;
+
+  if (currentSongIndex < 0) {
+    currentSongIndex = playlist.length - 1;
+  }
+
+  loadSong(currentSongIndex);
+
+  try {
+    await music.play();
+    musicBtn.textContent = "❚❚";
+  } catch {
     musicBtn.textContent = "▶";
   }
 });
