@@ -558,19 +558,44 @@ const current = document.getElementById("current");
 const duration = document.getElementById("duration");
 const viewCount = document.getElementById("viewCount");
 
-  const playlist = [
-  "music1.mp3",
-  "music2.mp3",
-  "music3.mp3"
+const playlist = [
+  {
+    name: "幻痛藥",
+    file: "music1.mp3"
+  },
+  {
+    name: "CAMO - Life is Wet",
+    file: "music2.mp3"
+  },
+  {
+    name: "第三首歌",
+    file: "music3.mp3"
+  }
 ];
 
-const randomSong =
-  playlist[Math.floor(Math.random() * playlist.length)];
+let currentSongIndex = 0;
 
-music.src = randomSong;
+function loadSong(index) {
+  const song = playlist[index];
 
-enter.addEventListener("click", async () => {
-  enter.classList.add("hide");
+  music.src = song.file;
+  document.getElementById("songName").textContent = song.name;
+
+  current.textContent = "0:00";
+  duration.textContent = "0:00";
+  progress.style.width = "0%";
+}
+
+loadSong(currentSongIndex);
+
+music.addEventListener("ended", async () => {
+  currentSongIndex++;
+
+  if (currentSongIndex >= playlist.length) {
+    currentSongIndex = 0;
+  }
+
+  loadSong(currentSongIndex);
 
   try {
     await music.play();
