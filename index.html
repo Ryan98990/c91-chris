@@ -721,11 +721,24 @@ function formatTime(seconds) {
 }
 
 fetch("https://api.counterapi.dev/v1/c91_chris_profile/views/up")
-  .then(res => res.json())
-  .then(data => {
-    viewCount.textContent = 580 + Number(data.count);
+  .then(res => {
+    if (!res.ok) {
+      throw new Error("Counter API error");
+    }
+    return res.json();
   })
-  .catch(() => {
+  .then(data => {
+    console.log("Counter API 回傳：", data);
+
+    const apiCount = Number(data.count ?? data.value ?? 0);
+
+    viewCount.textContent =
+      Number.isFinite(apiCount)
+        ? (580 + apiCount).toLocaleString()
+        : "580";
+  })
+  .catch(error => {
+    console.error("觀看人數讀取失敗：", error);
     viewCount.textContent = "580";
   });
   
