@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>꧁༺𖤍𓊈𝒞91_𝒞𝒽𝓇𝒾𝓈𓊉𖤍༻꧂</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+꧁༺𖤍𓊈𝒞91_𝒞𝒽𝓇𝒾𝓈𓊉𖤍༻꧂
+</title>
 
 <style>
+
+/* =========================================
+   基础
+========================================= */
+
 * {
   box-sizing: border-box;
 }
 
 :root {
   --glass: rgba(255,255,255,.16);
-  --glass-border: rgba(255,255,255,.25);
+
+  --glass-border:
+    rgba(255,255,255,.25);
+
   --glow:
     0 0 10px rgba(255,255,255,.9),
     0 0 22px rgba(255,255,255,.55);
@@ -27,14 +43,24 @@ body {
 
 body {
   min-height: 100vh;
+
   overflow: hidden;
 
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
   color: #fff;
 
   background:
-    linear-gradient(rgba(0,0,0,.32), rgba(0,0,0,.32)),
-    url("background.gif") center / cover no-repeat fixed;
+    linear-gradient(
+      rgba(0,0,0,.32),
+      rgba(0,0,0,.32)
+    ),
+    url("background.gif")
+    center / cover
+    no-repeat fixed;
 
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -43,47 +69,63 @@ body {
 
 body::before {
   content: "";
+
   position: fixed;
+
   inset: 0;
 
-  background: rgba(0,0,0,.05);
+  background:
+    rgba(0,0,0,.05);
 
-  backdrop-filter: blur(.5px);
-  -webkit-backdrop-filter: blur(1.4px) grayscale(.25);
+  backdrop-filter:
+    blur(.5px);
+
+  -webkit-backdrop-filter:
+    blur(1.4px)
+    grayscale(.25);
 
   z-index: 0;
 }
 
 img {
   pointer-events: none;
+
   -webkit-user-drag: none;
 }
 
-/* =========================
+
+/* =========================================
    雪花
-========================= */
+========================================= */
 
 #snow {
   position: fixed;
+
   inset: 0;
+
   z-index: 1;
+
   pointer-events: none;
 }
 
-/* =========================
-   进入画面
-========================= */
+
+/* =========================================
+   Click To Enter
+========================================= */
 
 .enter {
   position: fixed;
+
   inset: 0;
 
   z-index: 99;
 
   display: grid;
+
   place-items: center;
 
-  background: rgba(0,0,0,.92);
+  background:
+    rgba(0,0,0,.92);
 
   transition:
     opacity .7s ease,
@@ -93,37 +135,57 @@ img {
 .enter h2 {
   margin: 0;
 
-  font-size: clamp(22px, 5vw, 36px);
+  font-size:
+    clamp(
+      22px,
+      5vw,
+      36px
+    );
+
   letter-spacing: 4px;
 
-  font-family: Georgia, serif;
+  font-family:
+    Georgia,
+    serif;
+
   font-style: italic;
 
-  text-shadow: var(--glow);
+  text-shadow:
+    var(--glow);
 
-  animation: pulse 1.7s ease-in-out infinite;
+  animation:
+    pulse
+    1.7s
+    ease-in-out
+    infinite;
 }
 
 .enter.hide {
   opacity: 0;
+
   visibility: hidden;
+
   pointer-events: none;
 }
 
-/* =========================
+
+/* =========================================
    页面
-========================= */
+========================================= */
 
 .wrap {
   position: relative;
+
   z-index: 2;
 
   min-height: 100vh;
 
   display: flex;
+
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 18px;
@@ -131,42 +193,87 @@ img {
   padding: 22px;
 }
 
-/* =========================
+
+/* =========================================
    主卡片
-========================= */
+========================================= */
 
 .card {
-  width: min(92vw, 650px);
+  width:
+    min(
+      92vw,
+      650px
+    );
 
-  padding: 38px 34px 26px;
+  padding:
+    38px
+    34px
+    26px;
 
   border-radius: 30px;
 
   text-align: center;
 
-  background: rgba(255,255,255,0.06);
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .06
+    );
 
-  border: 1.5px solid rgba(255,255,255,0.25);
+  border:
+    1.5px solid
+    rgba(
+      255,
+      255,
+      255,
+      .25
+    );
 
   box-shadow:
-    0 0 25px rgba(255,255,255,0.08),
-    inset 0 0 20px rgba(255,255,255,0.03);
+    0 0 25px
+    rgba(
+      255,
+      255,
+      255,
+      .08
+    ),
 
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+    inset
+    0 0 20px
+    rgba(
+      255,
+      255,
+      255,
+      .03
+    );
 
-  animation: rise .9s ease both;
+  backdrop-filter:
+    blur(4px);
+
+  -webkit-backdrop-filter:
+    blur(4px);
+
+  animation:
+    rise
+    .9s
+    ease
+    both;
 }
 
-/* =========================
-   头像
-========================= */
+
+/* =========================================
+   大头像
+========================================= */
 
 .avatar {
   width: 124px;
+
   height: 124px;
 
-  margin: 0 auto 14px;
+  margin:
+    0 auto 14px;
 
   border-radius: 50%;
 
@@ -176,14 +283,33 @@ img {
       rgba(165,70,255,.85),
       transparent 24%
     ),
-    linear-gradient(135deg, #050505, #4b4b4b);
 
-  border: 4px solid rgba(255,255,255,.65);
+    linear-gradient(
+      135deg,
+      #050505,
+      #4b4b4b
+    );
+
+  border:
+    4px solid
+    rgba(
+      255,
+      255,
+      255,
+      .65
+    );
 
   box-shadow:
-    0 0 28px rgba(255,255,255,.65);
+    0 0 28px
+    rgba(
+      255,
+      255,
+      255,
+      .65
+    );
 
   display: grid;
+
   place-items: center;
 
   position: relative;
@@ -193,6 +319,7 @@ img {
 
 .avatar img {
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
@@ -200,9 +327,10 @@ img {
   border-radius: 50%;
 }
 
-/* =========================
+
+/* =========================================
    名字
-========================= */
+========================================= */
 
 h1 {
   margin: 0;
@@ -214,13 +342,19 @@ h1 {
 
   font-style: italic;
 
-  font-size: clamp(15px, 2.2vw, 22px);
+  font-size:
+    clamp(
+      15px,
+      2.2vw,
+      22px
+    );
 
   letter-spacing: .5px;
 
   line-height: 1.15;
 
-  text-shadow: var(--glow);
+  text-shadow:
+    var(--glow);
 
   word-break: keep-all;
 }
@@ -228,68 +362,119 @@ h1 {
 .divider {
   font-size: 26px;
 
-  margin: 14px 0 18px;
+  margin:
+    14px
+    0
+    18px;
 
   color: #fff;
 
   filter:
-    drop-shadow(0 0 10px white)
-    drop-shadow(0 0 20px #b300ff);
+    drop-shadow(
+      0 0 10px white
+    )
+
+    drop-shadow(
+      0 0 20px #b300ff
+    );
 }
 
 .title {
-  margin: 0 0 18px;
+  margin:
+    0 0 18px;
 
   font-size: 20px;
 
   font-weight: 800;
 
   text-shadow:
-    0 0 10px rgba(0,0,0,.45);
+    0 0 10px
+    rgba(
+      0,
+      0,
+      0,
+      .45
+    );
 }
 
-/* =========================
-   状态卡
-========================= */
+
+/* =========================================
+   Discord 状态
+========================================= */
 
 .status-card {
   width: fit-content;
 
   max-width: 340px;
 
-  margin: 0 auto 26px;
+  margin:
+    0 auto 26px;
 
-  padding: 13px 18px;
+  padding:
+    13px 18px;
 
   display: flex;
+
   align-items: center;
 
   gap: 12px;
 
   background:
-    rgba(255,255,255,0.08);
+    rgba(
+      255,
+      255,
+      255,
+      .08
+    );
 
   border:
-    1px solid rgba(255,255,255,0.20);
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .20
+    );
 
   border-radius: 22px;
 
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter:
+    blur(6px);
 
-  transition: .25s ease;
+  -webkit-backdrop-filter:
+    blur(6px);
+
+  transition:
+    .25s ease;
 }
 
 .status-card:hover {
   border-color:
-    rgba(255,255,255,0.35);
+    rgba(
+      255,
+      255,
+      255,
+      .35
+    );
 
   box-shadow:
-    0 0 20px rgba(255,255,255,0.10);
+    0 0 20px
+    rgba(
+      255,
+      255,
+      255,
+      .10
+    );
 }
+
+
+/* =========================================
+   小头像
+========================================= */
 
 .mini-avatar {
   width: 58px;
+
   height: 58px;
 
   border-radius: 50%;
@@ -304,6 +489,7 @@ h1 {
     );
 
   display: grid;
+
   place-items: center;
 
   position: relative;
@@ -311,6 +497,7 @@ h1 {
 
 .mini-avatar img {
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
@@ -318,24 +505,41 @@ h1 {
   border-radius: 50%;
 }
 
+
+/* 在线绿点 */
+
 .mini-avatar::after {
   content: "";
 
   position: absolute;
 
   right: 1px;
+
   bottom: 1px;
 
   width: 17px;
+
   height: 17px;
 
   border-radius: 50%;
 
-  background: #20d66f;
+  background:
+    #20d66f;
 
   border:
-    2px solid rgba(255,255,255,.8);
+    2px solid
+    rgba(
+      255,
+      255,
+      255,
+      .8
+    );
 }
+
+
+/* =========================================
+   状态文字
+========================================= */
 
 .status-text {
   text-align: left;
@@ -363,14 +567,16 @@ h1 {
   opacity: .92;
 }
 
-/* =========================
+
+/* =========================================
    社交媒体
-========================= */
+========================================= */
 
 .socials {
   display: flex;
 
   justify-content: center;
+
   align-items: center;
 
   gap: 14px;
@@ -382,9 +588,11 @@ h1 {
 
 .socials a {
   width: 30px;
+
   height: 30px;
 
   display: grid;
+
   place-items: center;
 
   color: #fff;
@@ -392,9 +600,18 @@ h1 {
   text-decoration: none;
 
   filter:
-    drop-shadow(0 0 8px rgba(255,255,255,.9));
+    drop-shadow(
+      0 0 8px
+      rgba(
+        255,
+        255,
+        255,
+        .9
+      )
+    );
 
-  transition: .2s ease;
+  transition:
+    .2s ease;
 }
 
 .socials a:hover {
@@ -405,19 +622,26 @@ h1 {
 
 .socials svg {
   width: 27px;
+
   height: 27px;
 
   fill: currentColor;
 }
 
-/* =========================
+
+/* =========================================
    观看人数
-========================= */
+========================================= */
 
 .views {
-  width: min(100%, 520px);
+  width:
+    min(
+      100%,
+      520px
+    );
 
-  margin: 0 auto 13px;
+  margin:
+    0 auto 13px;
 
   text-align: left;
 
@@ -428,31 +652,62 @@ h1 {
   opacity: .92;
 }
 
-/* =========================
-   音乐播放器
-========================= */
+
+/* =========================================
+   音乐盒
+========================================= */
 
 .music-box {
-  width: min(92vw, 650px);
+  width:
+    min(
+      92vw,
+      650px
+    );
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 
   padding: 18px;
 
   border-radius: 26px;
 
   background:
-    rgba(255,255,255,0.04);
+    rgba(
+      255,
+      255,
+      255,
+      .04
+    );
 
   border:
-    1px solid rgba(255,255,255,0.18);
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .18
+    );
 
   box-shadow:
-    0 0 12px rgba(255,255,255,0.05);
+    0 0 12px
+    rgba(
+      255,
+      255,
+      255,
+      .05
+    );
 
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter:
+    blur(4px);
+
+  -webkit-backdrop-filter:
+    blur(4px);
 }
+
+
+/* =========================================
+   播放器
+========================================= */
 
 .player {
   width: 100%;
@@ -474,8 +729,14 @@ h1 {
   border: 0;
 }
 
+
+/* =========================================
+   歌曲封面
+========================================= */
+
 .cover {
   width: 64px;
+
   height: 64px;
 
   border-radius: 15px;
@@ -483,25 +744,42 @@ h1 {
   flex: 0 0 auto;
 
   background:
-    linear-gradient(135deg, #060606, #555);
+    linear-gradient(
+      135deg,
+      #060606,
+      #555
+    );
 
   display: grid;
+
   place-items: center;
 
   box-shadow:
-    0 0 14px rgba(0,0,0,.28);
+    0 0 14px
+    rgba(
+      0,
+      0,
+      0,
+      .28
+    );
 
   overflow: hidden;
 }
 
 .cover img {
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
 
   border-radius: 15px;
 }
+
+
+/* =========================================
+   歌曲资料
+========================================= */
 
 .track {
   flex: 1;
@@ -532,10 +810,16 @@ h1 {
 
   display: flex;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
   gap: 10px;
 }
+
+
+/* =========================================
+   进度条
+========================================= */
 
 .bar {
   margin-top: 7px;
@@ -545,13 +829,19 @@ h1 {
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,.35);
+    rgba(
+      255,
+      255,
+      255,
+      .35
+    );
 
   overflow: hidden;
 }
 
 .progress {
   width: 0%;
+
   height: 100%;
 
   border-radius: 999px;
@@ -562,20 +852,29 @@ h1 {
     0 0 8px white;
 }
 
+
+/* =========================================
+   播放按钮
+========================================= */
+
 .music-btn {
   width: 40px;
+
   height: 40px;
 
   border: 0;
 
-  background: transparent;
+  background:
+    transparent;
 
   color: #fff;
 
   font-size: 28px;
 
   filter:
-    drop-shadow(0 0 6px white);
+    drop-shadow(
+      0 0 6px white
+    );
 }
 
 .prev-btn,
@@ -583,9 +882,10 @@ h1 {
   font-size: 24px;
 }
 
-/* =========================
+
+/* =========================================
    自定义鼠标
-========================= */
+========================================= */
 
 body,
 .enter,
@@ -599,6 +899,7 @@ button,
   position: fixed;
 
   width: 24px;
+
   height: 24px;
 
   pointer-events: none;
@@ -606,10 +907,14 @@ button,
   z-index: 999999;
 
   transform:
-    translate(-50%, -50%);
+    translate(
+      -50%,
+      -50%
+    );
 
   transition:
-    transform .1s ease;
+    transform
+    .1s ease;
 }
 
 #customCursor::before,
@@ -619,10 +924,14 @@ button,
   position: absolute;
 
   left: 50%;
+
   top: 50%;
 
   transform:
-    translate(-50%, -50%);
+    translate(
+      -50%,
+      -50%
+    );
 
   background: white;
 
@@ -634,50 +943,71 @@ button,
 
 #customCursor::before {
   width: 2px;
+
   height: 24px;
 }
 
 #customCursor::after {
   width: 24px;
+
   height: 2px;
 }
 
 #customCursor.active {
   transform:
-    translate(-50%, -50%)
+    translate(
+      -50%,
+      -50%
+    )
     scale(1.5);
 }
 
-/* =========================
+
+/* =========================================
    动画
-========================= */
+========================================= */
 
 @keyframes pulse {
+
   50% {
+
     opacity: .68;
-    transform: scale(.98);
+
+    transform:
+      scale(.98);
+
   }
+
 }
 
 @keyframes rise {
+
   from {
+
     opacity: 0;
+
     transform:
       translateY(18px)
       scale(.98);
+
   }
 
   to {
+
     opacity: 1;
+
     transform:
       translateY(0)
       scale(1);
+
   }
+
 }
 
-/* =========================
+
+/* =========================================
    手机
-========================= */
+========================================= */
 
 @media (pointer: coarse) {
 
@@ -692,61 +1022,89 @@ button,
   .bar {
     cursor: auto;
   }
+
 }
+
 
 @media (max-width: 520px) {
 
   .card {
+
     padding:
-      30px 20px 22px;
+      30px
+      20px
+      22px;
+
   }
 
   .avatar {
+
     width: 110px;
+
     height: 110px;
+
   }
 
   h1 {
+
     font-size: 18px;
+
   }
 
   .player {
+
     gap: 10px;
+
   }
 
   .cover {
+
     width: 55px;
+
     height: 55px;
+
   }
 
   .socials {
+
     gap: 14px;
+
   }
 
   .music-btn {
+
     width: 34px;
+
   }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
 <div id="customCursor"></div>
+
 
 <canvas id="snow"></canvas>
 
 
-<!-- =========================
-     点击进入
-========================= -->
+<!-- ======================================
+     Click To Enter
+====================================== -->
 
-<div class="enter" id="enter">
+<div
+  class="enter"
+  id="enter"
+>
 
-  <h2>
-    click to enter
-  </h2>
+<h2>
+click to enter
+</h2>
 
 </div>
 
@@ -754,64 +1112,64 @@ button,
 <div class="wrap">
 
 
-<!-- =========================
+<!-- ======================================
      个人资料卡
-========================= -->
+====================================== -->
 
 <main class="card">
 
 
 <div class="avatar">
 
-  <img
-    src="avatar.png"
-    alt="avatar"
-  >
+<img
+  src="avatar.png"
+  alt="avatar"
+>
 
 </div>
 
 
 <h1>
-  ꧁༺𖤍𓊈𝒞91_𝒞𝒽𝓇𝒾𝓈𓊉𖤍༻꧂
+꧁༺𖤍𓊈𝒞91_𝒞𝒽𝓇𝒾𝓈𓊉𖤍༻꧂
 </h1>
 
 
 <div class="divider">
-  𖤍
+𖤍
 </div>
 
 
 <p class="title">
-  𖤍 Just do your best, and leave the rest to time. 𖤍
+𖤍 Just do your best, and leave the rest to time. 𖤍
 </p>
 
 
-<!-- =========================
+<!-- ======================================
      状态
-========================= -->
+====================================== -->
 
 <section class="status-card">
 
 
 <div class="mini-avatar">
 
-  <img
-    src="mini-avatar.png"
-    alt="avatar"
-  >
+<img
+  src="mini-avatar.png"
+  alt="avatar"
+>
 
 </div>
 
 
 <div class="status-text">
 
-  <b>
-    ꧁༺𖤍𓊈 𝒞91_𝒞𝒽𝓇𝒾𝓈 𓊉𖤍༻꧂
-  </b>
+<b>
+꧁༺𖤍𓊈 𝒞91_𝒞𝒽𝓇𝒾𝓈 𓊉𖤍༻꧂
+</b>
 
-  <span>
-    Playing Delta Force
-  </span>
+<span>
+Playing Delta Force
+</span>
 
 </div>
 
@@ -819,9 +1177,9 @@ button,
 </section>
 
 
-<!-- =========================
+<!-- ======================================
      社交媒体
-========================= -->
+====================================== -->
 
 <nav class="socials">
 
@@ -829,10 +1187,10 @@ button,
 <!-- Instagram -->
 
 <a
-  href="https://www.instagram.com/austin959990?igsh=c282NWwxejZld3py&utm_source=qr"
-  target="_blank"
-  rel="noopener noreferrer"
-  title="Instagram"
+href="https://www.instagram.com/austin959990?igsh=c282NWwxejZld3py&utm_source=qr"
+target="_blank"
+rel="noopener noreferrer"
+title="Instagram"
 >
 
 <svg viewBox="0 0 24 24">
@@ -847,10 +1205,10 @@ button,
 <!-- Facebook -->
 
 <a
-  href="https://www.facebook.com/share/1HwXyC1L1U/?mibextid=wwXIfr"
-  target="_blank"
-  rel="noopener noreferrer"
-  title="Facebook"
+href="https://www.facebook.com/share/1HwXyC1L1U/?mibextid=wwXIfr"
+target="_blank"
+rel="noopener noreferrer"
+title="Facebook"
 >
 
 <svg viewBox="0 0 24 24">
@@ -865,10 +1223,10 @@ button,
 <!-- Discord -->
 
 <a
-  href="https://discord.com/channels/@me"
-  target="_blank"
-  rel="noopener noreferrer"
-  title="Discord"
+href="https://discord.com/channels/@me"
+target="_blank"
+rel="noopener noreferrer"
+title="Discord"
 >
 
 <svg viewBox="0 0 24 24">
@@ -883,10 +1241,10 @@ button,
 <!-- TikTok -->
 
 <a
-  href="https://www.tiktok.com/@austin_959990?_r=1&_t=ZS-979I73av3HI"
-  target="_blank"
-  rel="noopener noreferrer"
-  title="TikTok"
+href="https://www.tiktok.com/@austin_959990?_r=1&_t=ZS-979I73av3HI"
+target="_blank"
+rel="noopener noreferrer"
+title="TikTok"
 >
 
 <svg viewBox="0 0 24 24">
@@ -901,14 +1259,17 @@ button,
 </nav>
 
 
-<!-- =========================
+<!-- ======================================
      观看人数
-========================= -->
+====================================== -->
 
 <div class="views">
 
-  👁
-  <span id="viewCount">...</span>
+👁
+
+<span id="viewCount">
+...
+</span>
 
 </div>
 
@@ -916,9 +1277,9 @@ button,
 </main>
 
 
-<!-- =========================
+<!-- ======================================
      音乐播放器
-========================= -->
+====================================== -->
 
 <section class="music-box">
 
@@ -928,11 +1289,11 @@ button,
 
 <div class="cover">
 
-  <img
-    id="coverImg"
-    src="cover1.png"
-    alt="cover"
-  >
+<img
+  id="coverImg"
+  src="cover1.png"
+  alt="cover"
+>
 
 </div>
 
@@ -941,35 +1302,40 @@ button,
 
 
 <div
-  class="track-name"
-  id="songName"
+class="track-name"
+id="songName"
 >
-  CAMO - Life is Wet
+
+CAMO - Life is Wet
+
 </div>
 
 
 <div class="time-row">
 
-  <span id="current">
-    0:00
-  </span>
 
-  <span id="duration">
-    0:00
-  </span>
+<span id="current">
+0:00
+</span>
+
+
+<span id="duration">
+0:00
+</span>
+
 
 </div>
 
 
 <div
-  class="bar"
-  id="progressBar"
+class="bar"
+id="progressBar"
 >
 
-  <div
-    class="progress"
-    id="progress"
-  ></div>
+<div
+class="progress"
+id="progress"
+></div>
 
 </div>
 
@@ -978,29 +1344,32 @@ button,
 
 
 <button
-  class="music-btn prev-btn"
-  id="prevBtn"
-  type="button"
+class="music-btn prev-btn"
+id="prevBtn"
+type="button"
+aria-label="上一首"
 >
-  ⏮
+⏮
 </button>
 
 
 <button
-  class="music-btn"
-  id="musicBtn"
-  type="button"
+class="music-btn"
+id="musicBtn"
+type="button"
+aria-label="播放暂停"
 >
-  ▶
+▶
 </button>
 
 
 <button
-  class="music-btn next-btn"
-  id="nextBtn"
-  type="button"
+class="music-btn next-btn"
+id="nextBtn"
+type="button"
+aria-label="下一首"
 >
-  ⏭
+⏭
 </button>
 
 
@@ -1011,8 +1380,8 @@ button,
 
 
 <audio
-  id="music"
-  preload="metadata"
+id="music"
+preload="metadata"
 ></audio>
 
 
@@ -1021,45 +1390,81 @@ button,
 
 <script>
 
+
 /* =========================================
-   获取网页元素
+   获取元素
 ========================================= */
 
 const enter =
-  document.getElementById("enter");
+document.getElementById(
+  "enter"
+);
+
 
 const music =
-  document.getElementById("music");
+document.getElementById(
+  "music"
+);
+
 
 const musicBtn =
-  document.getElementById("musicBtn");
+document.getElementById(
+  "musicBtn"
+);
+
 
 const nextBtn =
-  document.getElementById("nextBtn");
+document.getElementById(
+  "nextBtn"
+);
+
 
 const prevBtn =
-  document.getElementById("prevBtn");
+document.getElementById(
+  "prevBtn"
+);
+
 
 const progress =
-  document.getElementById("progress");
+document.getElementById(
+  "progress"
+);
+
 
 const progressBar =
-  document.getElementById("progressBar");
+document.getElementById(
+  "progressBar"
+);
+
 
 const current =
-  document.getElementById("current");
+document.getElementById(
+  "current"
+);
+
 
 const duration =
-  document.getElementById("duration");
+document.getElementById(
+  "duration"
+);
+
 
 const viewCount =
-  document.getElementById("viewCount");
+document.getElementById(
+  "viewCount"
+);
+
 
 const songName =
-  document.getElementById("songName");
+document.getElementById(
+  "songName"
+);
+
 
 const coverImg =
-  document.getElementById("coverImg");
+document.getElementById(
+  "coverImg"
+);
 
 
 /* =========================================
@@ -1068,29 +1473,49 @@ const coverImg =
 
 const playlist = [
 
-  {
-    name: "CAMO - Life is Wet",
-    file: "music1.mp3",
-    cover: "cover1.png"
-  },
+{
+  name:
+    "CAMO - Life is Wet",
 
-  {
-    name: "Tlatre特雷西/LSGCsikoriot - 幻痛藥",
-    file: "music2.mp3",
-    cover: "cover2.png"
-  },
+  file:
+    "music1.mp3",
 
-  {
-    name: "Rae Sremmurd - Not So Bad",
-    file: "music3.mp3",
-    cover: "cover3.png"
-  },
+  cover:
+    "cover1.png"
+},
 
-  {
-    name: "Majin - 歐洲貨",
-    file: "music4.mp3",
-    cover: "cover4.png"
-  }
+{
+  name:
+    "Tlatre特雷西/LSGCsikoriot - 幻痛藥",
+
+  file:
+    "music2.mp3",
+
+  cover:
+    "cover2.png"
+},
+
+{
+  name:
+    "Rae Sremmurd - Not So Bad",
+
+  file:
+    "music3.mp3",
+
+  cover:
+    "cover3.png"
+},
+
+{
+  name:
+    "Majin - 歐洲貨",
+
+  file:
+    "music4.mp3",
+
+  cover:
+    "cover4.png"
+}
 
 ];
 
@@ -1104,58 +1529,65 @@ let currentSongIndex = 0;
 
 function loadSong(index) {
 
-  const song =
-    playlist[index];
+const song =
+playlist[index];
 
-  music.src =
-    song.file;
 
-  songName.textContent =
-    song.name;
+music.src =
+song.file;
 
-  coverImg.src =
-    song.cover;
 
-  current.textContent =
-    "0:00";
+songName.textContent =
+song.name;
 
-  duration.textContent =
-    "0:00";
 
-  progress.style.width =
-    "0%";
+coverImg.src =
+song.cover;
 
-  music.load();
+
+current.textContent =
+"0:00";
+
+
+duration.textContent =
+"0:00";
+
+
+progress.style.width =
+"0%";
+
+
+music.load();
 
 }
 
 
 /* =========================================
-   播放歌曲
+   播放
 ========================================= */
 
 async function playMusic() {
 
-  try {
+try {
 
-    await music.play();
+  await music.play();
 
-    musicBtn.textContent =
-      "❚❚";
+  musicBtn.textContent =
+    "❚❚";
 
-  }
+}
 
-  catch (error) {
+catch (error) {
 
-    console.error(
-      "音乐播放失败：",
-      error
-    );
+  console.error(
+    "音乐播放失败：",
+    error
+  );
 
-    musicBtn.textContent =
-      "▶";
+  musicBtn.textContent =
+    "▶";
 
-  }
+}
 
 }
 
@@ -1166,22 +1598,25 @@ async function playMusic() {
 
 async function nextSong() {
 
-  currentSongIndex++;
+currentSongIndex++;
 
-  if (
-    currentSongIndex >=
-    playlist.length
-  ) {
 
-    currentSongIndex = 0;
+if (
+  currentSongIndex >=
+  playlist.length
+) {
 
-  }
+  currentSongIndex = 0;
 
-  loadSong(
-    currentSongIndex
-  );
+}
 
-  await playMusic();
+
+loadSong(
+  currentSongIndex
+);
+
+
+await playMusic();
 
 }
 
@@ -1192,50 +1627,53 @@ async function nextSong() {
 
 async function previousSong() {
 
-  currentSongIndex--;
+currentSongIndex--;
 
-  if (
-    currentSongIndex < 0
-  ) {
 
-    currentSongIndex =
-      playlist.length - 1;
+if (
+  currentSongIndex < 0
+) {
 
-  }
-
-  loadSong(
-    currentSongIndex
-  );
-
-  await playMusic();
+  currentSongIndex =
+    playlist.length - 1;
 
 }
 
-
-/* =========================================
-   首次加载
-========================================= */
 
 loadSong(
   currentSongIndex
 );
 
 
+await playMusic();
+
+}
+
+
+/* 首次加载 */
+
+loadSong(
+currentSongIndex
+);
+
+
 /* =========================================
-   点击进入
+   Click To Enter
 ========================================= */
 
 enter.addEventListener(
-  "click",
-  async () => {
+"click",
 
-    enter.classList.add(
-      "hide"
-    );
+async () => {
 
-    await playMusic();
+  enter.classList.add(
+    "hide"
+  );
 
-  }
+  await playMusic();
+
+}
+
 );
 
 
@@ -1244,107 +1682,121 @@ enter.addEventListener(
 ========================================= */
 
 musicBtn.addEventListener(
-  "click",
-  async () => {
+"click",
 
-    if (music.paused) {
+async () => {
 
-      await playMusic();
+  if (
+    music.paused
+  ) {
 
-    }
-
-    else {
-
-      music.pause();
-
-      musicBtn.textContent =
-        "▶";
-
-    }
+    await playMusic();
 
   }
-);
 
+  else {
 
-/* =========================================
-   上一首按钮
-========================================= */
-
-prevBtn.addEventListener(
-  "click",
-  async () => {
-
-    await previousSong();
-
-  }
-);
-
-
-/* =========================================
-   下一首按钮
-========================================= */
-
-nextBtn.addEventListener(
-  "click",
-  async () => {
-
-    await nextSong();
-
-  }
-);
-
-
-/* =========================================
-   播放结束自动下一首
-========================================= */
-
-music.addEventListener(
-  "ended",
-  async () => {
-
-    await nextSong();
-
-  }
-);
-
-
-/* =========================================
-   读取歌曲长度
-========================================= */
-
-music.addEventListener(
-  "loadedmetadata",
-  () => {
-
-    duration.textContent =
-      formatTime(
-        music.duration
-      );
-
-  }
-);
-
-
-/* =========================================
-   音乐文件错误
-========================================= */
-
-music.addEventListener(
-  "error",
-  () => {
-
-    duration.textContent =
-      "找不到歌曲";
+    music.pause();
 
     musicBtn.textContent =
       "▶";
 
-    console.error(
-      "找不到音乐文件：",
-      music.src
+  }
+
+}
+
+);
+
+
+/* =========================================
+   上一首
+========================================= */
+
+prevBtn.addEventListener(
+"click",
+
+async () => {
+
+  await previousSong();
+
+}
+
+);
+
+
+/* =========================================
+   下一首
+========================================= */
+
+nextBtn.addEventListener(
+"click",
+
+async () => {
+
+  await nextSong();
+
+}
+
+);
+
+
+/* =========================================
+   自动下一首
+========================================= */
+
+music.addEventListener(
+"ended",
+
+async () => {
+
+  await nextSong();
+
+}
+
+);
+
+
+/* =========================================
+   音乐长度
+========================================= */
+
+music.addEventListener(
+"loadedmetadata",
+
+() => {
+
+  duration.textContent =
+    formatTime(
+      music.duration
     );
 
-  }
+}
+
+);
+
+
+/* =========================================
+   音乐错误
+========================================= */
+
+music.addEventListener(
+"error",
+
+() => {
+
+  duration.textContent =
+    "找不到歌曲";
+
+  musicBtn.textContent =
+    "▶";
+
+  console.error(
+    "找不到音乐：",
+    music.src
+  );
+
+}
+
 );
 
 
@@ -1353,273 +1805,261 @@ music.addEventListener(
 ========================================= */
 
 music.addEventListener(
-  "timeupdate",
-  () => {
+"timeupdate",
 
-    current.textContent =
-      formatTime(
-        music.currentTime
-      );
+() => {
 
-    if (
-      Number.isFinite(
+  current.textContent =
+    formatTime(
+      music.currentTime
+    );
+
+
+  if (
+    Number.isFinite(
+      music.duration
+    )
+    &&
+    music.duration > 0
+  ) {
+
+    const percent =
+      (
+        music.currentTime /
         music.duration
       )
-      &&
-      music.duration > 0
-    ) {
+      *
+      100;
 
-      const percent =
-        (
-          music.currentTime /
-          music.duration
-        ) * 100;
 
-      progress.style.width =
-        percent + "%";
+    progress.style.width =
+      percent + "%";
 
-      duration.textContent =
-        formatTime(
-          music.duration
-        );
 
-    }
+    duration.textContent =
+      formatTime(
+        music.duration
+      );
 
   }
+
+}
+
 );
 
 
 /* =========================================
-   点击音乐进度条
+   点击进度条
 ========================================= */
 
 progressBar.addEventListener(
-  "click",
-  event => {
+"click",
 
-    if (
-      !Number.isFinite(
-        music.duration
-      )
-      ||
-      music.duration <= 0
-    ) {
+event => {
 
-      return;
+  if (
+    !Number.isFinite(
+      music.duration
+    )
+    ||
+    music.duration <= 0
+  ) {
 
-    }
-
-    const rect =
-      progressBar
-        .getBoundingClientRect();
-
-    const clickX =
-      event.clientX -
-      rect.left;
-
-    let percent =
-      clickX /
-      rect.width;
-
-    percent =
-      Math.max(
-        0,
-        Math.min(
-          1,
-          percent
-        )
-      );
-
-    music.currentTime =
-      percent *
-      music.duration;
+    return;
 
   }
+
+
+  const rect =
+    progressBar
+      .getBoundingClientRect();
+
+
+  const clickX =
+    event.clientX -
+    rect.left;
+
+
+  let percent =
+    clickX /
+    rect.width;
+
+
+  percent =
+    Math.max(
+      0,
+      Math.min(
+        1,
+        percent
+      )
+    );
+
+
+  music.currentTime =
+    percent *
+    music.duration;
+
+}
+
 );
 
 
 /* =========================================
-   时间格式
+   时间转换
 ========================================= */
 
 function formatTime(seconds) {
 
-  if (
-    !Number.isFinite(seconds)
-    ||
-    seconds < 0
-  ) {
+if (
+  !Number.isFinite(seconds)
+  ||
+  seconds < 0
+) {
 
-    return "0:00";
+  return "0:00";
 
-  }
+}
 
-  const minutes =
-    Math.floor(
-      seconds / 60
-    );
 
-  const secs =
-    Math.floor(
-      seconds % 60
-    )
-    .toString()
-    .padStart(
-      2,
-      "0"
-    );
+const minutes =
+Math.floor(
+  seconds / 60
+);
 
-  return (
-    minutes +
-    ":" +
-    secs
-  );
+
+const secs =
+Math.floor(
+  seconds % 60
+)
+.toString()
+.padStart(
+  2,
+  "0"
+);
+
+
+return (
+  minutes +
+  ":" +
+  secs
+);
 
 }
 
 
 /* =========================================
-   观看人数系统
+   ★ 永久观看人数系统 ★
 
-   基础观看人数：580
+   Cloudflare Worker + KV
 
-   每打开网页：
-   +1
+   打开网页 +1
+   刷新网页 +1
 
-   每刷新网页：
-   +1
-
-   CounterAPI 保存累计数量
+   数字永久保存在 KV
 ========================================= */
-
-const BASE_VIEWS = 580;
 
 
 /*
-  页面打开时先显示 ...
-  不直接重新显示 580
+  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+  这里一定要换成
+  你自己的 Cloudflare Worker 地址
+
+  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+*/
+
+const VIEW_API =
+"https://你的Worker网址.workers.dev/view";
+
+
+/*
+  加载期间
 */
 
 viewCount.textContent =
-  "...";
+"...";
 
-
-/*
-  /up 每请求一次
-  CounterAPI 就会 +1
-*/
 
 fetch(
-  "https://api.counterapi.dev/v1/c91_chris_profile/views/up",
-  {
-    method: "GET",
-    cache: "no-store"
-  }
+VIEW_API,
+{
+  method: "GET",
+
+  cache: "no-store"
+}
 )
 
 .then(response => {
 
-  if (!response.ok) {
+if (
+  !response.ok
+) {
 
-    throw new Error(
-      "Counter API HTTP Error: " +
-      response.status
-    );
+  throw new Error(
+    "HTTP " +
+    response.status
+  );
 
-  }
+}
 
-  return response.json();
+
+return response.json();
 
 })
 
 .then(data => {
 
-  console.log(
-    "Counter API 回传：",
-    data
+console.log(
+  "观看人数 API：",
+  data
+);
+
+
+const views =
+Number(
+  data.views
+);
+
+
+if (
+  !Number.isFinite(
+    views
+  )
+) {
+
+  throw new Error(
+    "观看人数不是有效数字"
   );
 
-
-  /*
-    CounterAPI 可能返回：
-
-    count
-    或
-    value
-  */
-
-  const rawCount =
-    data.count ??
-    data.value;
+}
 
 
-  const apiCount =
-    Number(rawCount);
-
-
-  /*
-    防止出现 NaN
-  */
-
-  if (
-    !Number.isFinite(apiCount)
-  ) {
-
-    throw new Error(
-      "Counter API 返回的观看人数不是有效数字"
-    );
-
-  }
-
-
-  /*
-    580 + API 累计观看次数
-
-    API = 1
-    显示 581
-
-    API = 2
-    显示 582
-
-    API = 100
-    显示 680
-  */
-
-  const totalViews =
-    BASE_VIEWS +
-    apiCount;
-
-
-  viewCount.textContent =
-    totalViews.toLocaleString();
+viewCount.textContent =
+views.toLocaleString();
 
 })
 
 .catch(error => {
 
-  console.error(
-    "观看人数读取失败：",
-    error
-  );
+console.error(
+  "观看人数读取失败：",
+  error
+);
 
 
-  /*
-    API 出错：
+/*
+  API 出错不显示 580
+  也不会显示 NaN
+*/
 
-    不显示 NaN
-    不重新显示 580
-
-    显示 —
-  */
-
-  viewCount.textContent =
-    "—";
+viewCount.textContent =
+"—";
 
 });
 
 
 /* =========================================
-   观看人数系统结束
+   观看人数结束
 ========================================= */
 
 
@@ -1628,23 +2068,25 @@ fetch(
 ========================================= */
 
 const canvas =
-  document.getElementById(
-    "snow"
-  );
+document.getElementById(
+  "snow"
+);
+
 
 const ctx =
-  canvas.getContext(
-    "2d"
-  );
+canvas.getContext(
+  "2d"
+);
 
 
 function resizeSnow() {
 
-  canvas.width =
-    window.innerWidth;
+canvas.width =
+window.innerWidth;
 
-  canvas.height =
-    window.innerHeight;
+
+canvas.height =
+window.innerHeight;
 
 }
 
@@ -1653,138 +2095,145 @@ resizeSnow();
 
 
 window.addEventListener(
-  "resize",
-  resizeSnow
+"resize",
+resizeSnow
 );
 
 
 /* =========================================
-   创建雪花
+   雪花资料
 ========================================= */
 
 const flakes =
-  Array.from(
-    {
-      length: 65
-    },
+Array.from(
 
-    () => ({
+{
+  length: 65
+},
 
-      x:
-        Math.random() *
-        canvas.width,
+() => ({
 
-      y:
-        Math.random() *
-        canvas.height,
+  x:
+    Math.random() *
+    canvas.width,
 
-      r:
-        Math.random() *
-        2.2 + 1,
+  y:
+    Math.random() *
+    canvas.height,
 
-      speed:
-        Math.random() *
-        0.75 + 0.25,
+  r:
+    Math.random() *
+    2.2 + 1,
 
-      drift:
-        Math.random() *
-        0.55 + 0.15
+  speed:
+    Math.random() *
+    .75 + .25,
 
-    })
-  );
+  drift:
+    Math.random() *
+    .55 + .15
+
+})
+
+);
 
 
 /* =========================================
-   绘制雪花
+   雪花动画
 ========================================= */
 
 function drawSnow() {
 
-  ctx.clearRect(
-    0,
-    0,
-    canvas.width,
-    canvas.height
-  );
+ctx.clearRect(
+  0,
+  0,
+  canvas.width,
+  canvas.height
+);
 
 
-  ctx.fillStyle =
-    "rgba(255,255,255,.76)";
+ctx.fillStyle =
+"rgba(255,255,255,.76)";
 
 
-  flakes.forEach(
-    flake => {
-
-      flake.y +=
-        flake.speed;
+flakes.forEach(
+flake => {
 
 
-      flake.x +=
-        Math.sin(
-          flake.y * 0.018
-        )
-        *
-        flake.drift;
+flake.y +=
+flake.speed;
 
 
-      if (
-        flake.y >
-        canvas.height + 10
-      ) {
-
-        flake.y =
-          -10;
-
-        flake.x =
-          Math.random() *
-          canvas.width;
-
-      }
+flake.x +=
+Math.sin(
+  flake.y *
+  .018
+)
+*
+flake.drift;
 
 
-      if (
-        flake.x >
-        canvas.width + 10
-      ) {
+if (
+  flake.y >
+  canvas.height + 10
+) {
 
-        flake.x =
-          -10;
-
-      }
+  flake.y =
+    -10;
 
 
-      if (
-        flake.x <
-        -10
-      ) {
+  flake.x =
+    Math.random() *
+    canvas.width;
 
-        flake.x =
-          canvas.width + 10;
-
-      }
+}
 
 
-      ctx.beginPath();
+if (
+  flake.x >
+  canvas.width + 10
+) {
+
+  flake.x =
+    -10;
+
+}
 
 
-      ctx.arc(
-        flake.x,
-        flake.y,
-        flake.r,
-        0,
-        Math.PI * 2
-      );
+if (
+  flake.x <
+  -10
+) {
+
+  flake.x =
+    canvas.width + 10;
+
+}
 
 
-      ctx.fill();
-
-    }
-  );
+ctx.beginPath();
 
 
-  requestAnimationFrame(
-    drawSnow
-  );
+ctx.arc(
+  flake.x,
+  flake.y,
+  flake.r,
+  0,
+  Math.PI * 2
+);
+
+
+ctx.fill();
+
+
+}
+
+);
+
+
+requestAnimationFrame(
+drawSnow
+);
 
 }
 
@@ -1797,66 +2246,77 @@ drawSnow();
 ========================================= */
 
 const customCursor =
-  document.getElementById(
-    "customCursor"
-  );
+document.getElementById(
+  "customCursor"
+);
 
 
 document.addEventListener(
-  "mousemove",
-  event => {
+"mousemove",
 
-    customCursor.style.left =
-      event.clientX +
-      "px";
+event => {
 
-    customCursor.style.top =
-      event.clientY +
-      "px";
+customCursor.style.left =
+event.clientX +
+"px";
 
-  }
+
+customCursor.style.top =
+event.clientY +
+"px";
+
+}
+
 );
 
 
 /* =========================================
-   鼠标经过按钮
+   鼠标 Hover
 ========================================= */
 
 document
 .querySelectorAll(
-  "a, button, .enter, .bar"
+"a, button, .enter, .bar"
 )
 .forEach(
-  item => {
 
-    item.addEventListener(
-      "mouseenter",
-      () => {
-
-        customCursor
-          .classList
-          .add(
-            "active"
-          );
-
-      }
-    );
+item => {
 
 
-    item.addEventListener(
-      "mouseleave",
-      () => {
+item.addEventListener(
+"mouseenter",
 
-        customCursor
-          .classList
-          .remove(
-            "active"
-          );
+() => {
 
-      }
-    );
+customCursor
+.classList
+.add(
+  "active"
+);
 
-  }
+}
+
+);
+
+
+item.addEventListener(
+"mouseleave",
+
+() => {
+
+customCursor
+.classList
+.remove(
+  "active"
+);
+
+}
+
+);
+
+
+}
+
 );
 
 
@@ -1865,16 +2325,18 @@ document
 ========================================= */
 
 document.addEventListener(
-  "mousedown",
-  () => {
+"mousedown",
 
-    customCursor
-      .classList
-      .add(
-        "active"
-      );
+() => {
 
-  }
+customCursor
+.classList
+.add(
+  "active"
+);
+
+}
+
 );
 
 
@@ -1883,16 +2345,18 @@ document.addEventListener(
 ========================================= */
 
 document.addEventListener(
-  "mouseup",
-  () => {
+"mouseup",
 
-    customCursor
-      .classList
-      .remove(
-        "active"
-      );
+() => {
 
-  }
+customCursor
+.classList
+.remove(
+  "active"
+);
+
+}
+
 );
 
 
@@ -1901,76 +2365,77 @@ document.addEventListener(
 ========================================= */
 
 document.addEventListener(
-  "contextmenu",
-  event => {
+"contextmenu",
 
-    event.preventDefault();
+event => {
 
-  }
+event.preventDefault();
+
+}
+
 );
 
 
 /* =========================================
-   禁止部分快捷键
-
-   Ctrl + C
-   Ctrl + A
-   Ctrl + S
-   Ctrl + U
-   F12
+   禁止快捷键
 ========================================= */
 
 document.addEventListener(
-  "keydown",
-  event => {
+"keydown",
 
-    const key =
-      event.key
-        .toLowerCase();
+event => {
 
 
-    if (
+const key =
+event.key
+.toLowerCase();
 
-      (
-        event.ctrlKey
-        &&
-        [
-          "c",
-          "a",
-          "s",
-          "u"
-        ]
-        .includes(
-          key
-        )
-      )
 
-      ||
+if (
 
-      event.key ===
-      "F12"
+(
+  event.ctrlKey
+  &&
+  [
+    "c",
+    "a",
+    "s",
+    "u"
+  ]
+  .includes(
+    key
+  )
+)
 
-    ) {
+||
 
-      event.preventDefault();
+event.key ===
+"F12"
 
-    }
+) {
 
-  }
+event.preventDefault();
+
+}
+
+}
+
 );
 
 
 /* =========================================
-   禁止拖动图片
+   禁止拖动
 ========================================= */
 
 document.addEventListener(
-  "dragstart",
-  event => {
+"dragstart",
 
-    event.preventDefault();
+event => {
 
-  }
+event.preventDefault();
+
+}
+
 );
 
 
