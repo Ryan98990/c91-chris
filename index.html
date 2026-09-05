@@ -71,7 +71,7 @@ img {
 }
 
 /* =========================
-   进入页面
+   进入画面
 ========================= */
 
 .enter {
@@ -84,8 +84,6 @@ img {
   place-items: center;
 
   background: rgba(0,0,0,.92);
-
-  cursor: pointer;
 
   transition:
     opacity .7s ease,
@@ -113,12 +111,11 @@ img {
 }
 
 /* =========================
-   主容器
+   页面
 ========================= */
 
 .wrap {
   position: relative;
-
   z-index: 2;
 
   min-height: 100vh;
@@ -135,7 +132,7 @@ img {
 }
 
 /* =========================
-   个人资料卡
+   主卡片
 ========================= */
 
 .card {
@@ -162,7 +159,7 @@ img {
 }
 
 /* =========================
-   大头像
+   头像
 ========================= */
 
 .avatar {
@@ -190,6 +187,7 @@ img {
   place-items: center;
 
   position: relative;
+
   overflow: hidden;
 }
 
@@ -251,7 +249,7 @@ h1 {
 }
 
 /* =========================
-   Discord 状态
+   状态卡
 ========================= */
 
 .status-card {
@@ -264,7 +262,6 @@ h1 {
   padding: 13px 18px;
 
   display: flex;
-
   align-items: center;
 
   gap: 12px;
@@ -320,8 +317,6 @@ h1 {
 
   border-radius: 50%;
 }
-
-/* 在线绿点 */
 
 .mini-avatar::after {
   content: "";
@@ -390,7 +385,6 @@ h1 {
   height: 30px;
 
   display: grid;
-
   place-items: center;
 
   color: #fff;
@@ -398,9 +392,7 @@ h1 {
   text-decoration: none;
 
   filter:
-    drop-shadow(
-      0 0 8px rgba(255,255,255,.9)
-    );
+    drop-shadow(0 0 8px rgba(255,255,255,.9));
 
   transition: .2s ease;
 }
@@ -491,11 +483,7 @@ h1 {
   flex: 0 0 auto;
 
   background:
-    linear-gradient(
-      135deg,
-      #060606,
-      #555
-    );
+    linear-gradient(135deg, #060606, #555);
 
   display: grid;
   place-items: center;
@@ -549,10 +537,6 @@ h1 {
   gap: 10px;
 }
 
-/* =========================
-   音乐进度条
-========================= */
-
 .bar {
   margin-top: 7px;
 
@@ -564,8 +548,6 @@ h1 {
     rgba(255,255,255,.35);
 
   overflow: hidden;
-
-  cursor: pointer;
 }
 
 .progress {
@@ -580,10 +562,6 @@ h1 {
     0 0 8px white;
 }
 
-/* =========================
-   音乐按钮
-========================= */
-
 .music-btn {
   width: 40px;
   height: 40px;
@@ -595,8 +573,6 @@ h1 {
   color: #fff;
 
   font-size: 28px;
-
-  cursor: pointer;
 
   filter:
     drop-shadow(0 0 6px white);
@@ -679,16 +655,13 @@ button,
 @keyframes pulse {
   50% {
     opacity: .68;
-
-    transform:
-      scale(.98);
+    transform: scale(.98);
   }
 }
 
 @keyframes rise {
   from {
     opacity: 0;
-
     transform:
       translateY(18px)
       scale(.98);
@@ -696,7 +669,6 @@ button,
 
   to {
     opacity: 1;
-
     transform:
       translateY(0)
       scale(1);
@@ -708,6 +680,7 @@ button,
 ========================= */
 
 @media (pointer: coarse) {
+
   #customCursor {
     display: none;
   }
@@ -754,6 +727,7 @@ button,
     width: 34px;
   }
 }
+
 </style>
 </head>
 
@@ -763,221 +737,293 @@ button,
 
 <canvas id="snow"></canvas>
 
-<!-- 点击进入 -->
+
+<!-- =========================
+     点击进入
+========================= -->
+
 <div class="enter" id="enter">
-  <h2>click to enter</h2>
+
+  <h2>
+    click to enter
+  </h2>
+
 </div>
+
 
 <div class="wrap">
 
-  <!-- =====================
-       个人资料
-  ====================== -->
 
-  <main class="card">
+<!-- =========================
+     个人资料卡
+========================= -->
 
-    <div class="avatar">
-      <img
-        src="avatar.png"
-        alt="avatar"
-      >
-    </div>
+<main class="card">
 
-    <h1>
-      ꧁༺𖤍𓊈𝒞91_𝒞𝒽𝓇𝒾𝓈𓊉𖤍༻꧂
-    </h1>
 
-    <div class="divider">
-      𖤍
-    </div>
+<div class="avatar">
 
-    <p class="title">
-      𖤍 Just do your best, and leave the rest to time. 𖤍
-    </p>
-
-    <!-- 状态 -->
-
-    <section class="status-card">
-
-      <div class="mini-avatar">
-        <img
-          src="mini-avatar.png"
-          alt="avatar"
-        >
-      </div>
-
-      <div class="status-text">
-
-        <b>
-          ꧁༺𖤍𓊈 𝒞91_𝒞𝒽𝓇𝒾𝓈 𓊉𖤍༻꧂
-        </b>
-
-        <span>
-          Playing Delta Force
-        </span>
-
-      </div>
-
-    </section>
-
-    <!-- =====================
-         社交媒体
-    ====================== -->
-
-    <nav class="socials">
-
-      <!-- Instagram -->
-
-      <a
-        href="https://www.instagram.com/austin959990?igsh=c282NWwxejZld3py&utm_source=qr"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Instagram"
-      >
-        <svg viewBox="0 0 24 24">
-          <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8zm9.7 1.8a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-        </svg>
-      </a>
-
-      <!-- Facebook -->
-
-      <a
-        href="https://www.facebook.com/share/1HwXyC1L1U/?mibextid=wwXIfr"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Facebook"
-      >
-        <svg viewBox="0 0 24 24">
-          <path d="M14 8.5V6.7c0-.9.3-1.4 1.5-1.4H17V2.2c-.7-.1-1.6-.2-2.5-.2C12 2 10.3 3.6 10.3 6.4v2.1H7.5V12h2.8v10H14V12h2.8l.4-3.5H14z"/>
-        </svg>
-      </a>
-
-      <!-- Discord -->
-
-      <a
-        href="https://discord.com/channels/@me"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Discord"
-      >
-        <svg viewBox="0 0 24 24">
-          <path d="M20.3 4.4A16.9 16.9 0 0 0 16.1 3l-.2.4c1.5.4 2.2 1 2.2 1a13.7 13.7 0 0 0-12.2 0s.8-.6 2.3-1L8 3a16.9 16.9 0 0 0-4.3 1.4C1 8.4.3 12.3.7 16.2a17 17 0 0 0 5.2 2.6l.7-1.1c-1.2-.4-1.7-.9-1.7-.9l.4.2c3.3 1.5 6.9 1.4 10.4 0l.4-.2s-.6.5-1.8.9l.7 1.1a17 17 0 0 0 5.2-2.6c.5-4.5-.8-8.3-2.9-11.8zM8.4 14.1c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm7.2 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/>
-        </svg>
-      </a>
-
-      <!-- TikTok -->
-
-      <a
-        href="https://www.tiktok.com/@austin_959990?_r=1&_t=ZS-979I73av3HI"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="TikTok"
-      >
-        <svg viewBox="0 0 24 24">
-          <path d="M16.7 2c.4 3 2.1 4.8 5.1 5v3.4c-1.7.2-3.3-.4-5-1.4v6.3c0 8-8.7 10.5-12.2 4.8-2.3-3.7-.9-10.2 6.5-10.5v3.6c-.6.1-1.3.3-1.9.6-1.8 1-2.3 2.9-1.4 4.3 1.6 2.6 5.2 1.2 5.2-2V2h3.7z"/>
-        </svg>
-      </a>
-
-    </nav>
-
-    <!-- 观看人数 -->
-
-    <div class="views">
-      👁
-      <span id="viewCount">580</span>
-    </div>
-
-  </main>
-
-  <!-- =====================
-       音乐播放器
-  ====================== -->
-
-  <section class="music-box">
-
-    <section class="player">
-
-      <div class="cover">
-        <img
-          id="coverImg"
-          src="cover1.png"
-          alt="cover"
-        >
-      </div>
-
-      <div class="track">
-
-        <div
-          class="track-name"
-          id="songName"
-        >
-          CAMO - Life is Wet
-        </div>
-
-        <div class="time-row">
-
-          <span id="current">
-            0:00
-          </span>
-
-          <span id="duration">
-            0:00
-          </span>
-
-        </div>
-
-        <div class="bar" id="progressBar">
-          <div
-            class="progress"
-            id="progress"
-          ></div>
-        </div>
-
-      </div>
-
-      <button
-        class="music-btn prev-btn"
-        id="prevBtn"
-        type="button"
-        aria-label="上一首"
-      >
-        ⏮
-      </button>
-
-      <button
-        class="music-btn"
-        id="musicBtn"
-        type="button"
-        aria-label="播放或暂停"
-      >
-        ▶
-      </button>
-
-      <button
-        class="music-btn next-btn"
-        id="nextBtn"
-        type="button"
-        aria-label="下一首"
-      >
-        ⏭
-      </button>
-
-    </section>
-
-  </section>
-
-  <audio
-    id="music"
-    preload="metadata"
-  ></audio>
+  <img
+    src="avatar.png"
+    alt="avatar"
+  >
 
 </div>
 
+
+<h1>
+  ꧁༺𖤍𓊈𝒞91_𝒞𝒽𝓇𝒾𝓈𓊉𖤍༻꧂
+</h1>
+
+
+<div class="divider">
+  𖤍
+</div>
+
+
+<p class="title">
+  𖤍 Just do your best, and leave the rest to time. 𖤍
+</p>
+
+
+<!-- =========================
+     状态
+========================= -->
+
+<section class="status-card">
+
+
+<div class="mini-avatar">
+
+  <img
+    src="mini-avatar.png"
+    alt="avatar"
+  >
+
+</div>
+
+
+<div class="status-text">
+
+  <b>
+    ꧁༺𖤍𓊈 𝒞91_𝒞𝒽𝓇𝒾𝓈 𓊉𖤍༻꧂
+  </b>
+
+  <span>
+    Playing Delta Force
+  </span>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     社交媒体
+========================= -->
+
+<nav class="socials">
+
+
+<!-- Instagram -->
+
+<a
+  href="https://www.instagram.com/austin959990?igsh=c282NWwxejZld3py&utm_source=qr"
+  target="_blank"
+  rel="noopener noreferrer"
+  title="Instagram"
+>
+
+<svg viewBox="0 0 24 24">
+
+<path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8zm9.7 1.8a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+
+</svg>
+
+</a>
+
+
+<!-- Facebook -->
+
+<a
+  href="https://www.facebook.com/share/1HwXyC1L1U/?mibextid=wwXIfr"
+  target="_blank"
+  rel="noopener noreferrer"
+  title="Facebook"
+>
+
+<svg viewBox="0 0 24 24">
+
+<path d="M14 8.5V6.7c0-.9.3-1.4 1.5-1.4H17V2.2c-.7-.1-1.6-.2-2.5-.2C12 2 10.3 3.6 10.3 6.4v2.1H7.5V12h2.8v10H14V12h2.8l.4-3.5H14z"/>
+
+</svg>
+
+</a>
+
+
+<!-- Discord -->
+
+<a
+  href="https://discord.com/channels/@me"
+  target="_blank"
+  rel="noopener noreferrer"
+  title="Discord"
+>
+
+<svg viewBox="0 0 24 24">
+
+<path d="M20.3 4.4A16.9 16.9 0 0 0 16.1 3l-.2.4c1.5.4 2.2 1 2.2 1a13.7 13.7 0 0 0-12.2 0s.8-.6 2.3-1L8 3a16.9 16.9 0 0 0-4.3 1.4C1 8.4.3 12.3.7 16.2a17 17 0 0 0 5.2 2.6l.7-1.1c-1.2-.4-1.7-.9-1.7-.9l.4.2c3.3 1.5 6.9 1.4 10.4 0l.4-.2s-.6.5-1.8.9l.7 1.1a17 17 0 0 0 5.2-2.6c.5-4.5-.8-8.3-2.9-11.8zM8.4 14.1c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm7.2 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/>
+
+</svg>
+
+</a>
+
+
+<!-- TikTok -->
+
+<a
+  href="https://www.tiktok.com/@austin_959990?_r=1&_t=ZS-979I73av3HI"
+  target="_blank"
+  rel="noopener noreferrer"
+  title="TikTok"
+>
+
+<svg viewBox="0 0 24 24">
+
+<path d="M16.7 2c.4 3 2.1 4.8 5.1 5v3.4c-1.7.2-3.3-.4-5-1.4v6.3c0 8-8.7 10.5-12.2 4.8-2.3-3.7-.9-10.2 6.5-10.5v3.6c-.6.1-1.3.3-1.9.6-1.8 1-2.3 2.9-1.4 4.3 1.6 2.6 5.2 1.2 5.2-2V2h3.7z"/>
+
+</svg>
+
+</a>
+
+
+</nav>
+
+
+<!-- =========================
+     观看人数
+========================= -->
+
+<div class="views">
+
+  👁
+  <span id="viewCount">...</span>
+
+</div>
+
+
+</main>
+
+
+<!-- =========================
+     音乐播放器
+========================= -->
+
+<section class="music-box">
+
+
+<section class="player">
+
+
+<div class="cover">
+
+  <img
+    id="coverImg"
+    src="cover1.png"
+    alt="cover"
+  >
+
+</div>
+
+
+<div class="track">
+
+
+<div
+  class="track-name"
+  id="songName"
+>
+  CAMO - Life is Wet
+</div>
+
+
+<div class="time-row">
+
+  <span id="current">
+    0:00
+  </span>
+
+  <span id="duration">
+    0:00
+  </span>
+
+</div>
+
+
+<div
+  class="bar"
+  id="progressBar"
+>
+
+  <div
+    class="progress"
+    id="progress"
+  ></div>
+
+</div>
+
+
+</div>
+
+
+<button
+  class="music-btn prev-btn"
+  id="prevBtn"
+  type="button"
+>
+  ⏮
+</button>
+
+
+<button
+  class="music-btn"
+  id="musicBtn"
+  type="button"
+>
+  ▶
+</button>
+
+
+<button
+  class="music-btn next-btn"
+  id="nextBtn"
+  type="button"
+>
+  ⏭
+</button>
+
+
+</section>
+
+
+</section>
+
+
+<audio
+  id="music"
+  preload="metadata"
+></audio>
+
+
+</div>
+
+
 <script>
 
-/* =========================
-   获取元素
-========================= */
+/* =========================================
+   获取网页元素
+========================================= */
 
 const enter =
   document.getElementById("enter");
@@ -1016,9 +1062,9 @@ const coverImg =
   document.getElementById("coverImg");
 
 
-/* =========================
+/* =========================================
    播放列表
-========================= */
+========================================= */
 
 const playlist = [
 
@@ -1048,18 +1094,21 @@ const playlist = [
 
 ];
 
+
 let currentSongIndex = 0;
 
 
-/* =========================
+/* =========================================
    加载歌曲
-========================= */
+========================================= */
 
 function loadSong(index) {
 
-  const song = playlist[index];
+  const song =
+    playlist[index];
 
-  music.src = song.file;
+  music.src =
+    song.file;
 
   songName.textContent =
     song.name;
@@ -1077,12 +1126,13 @@ function loadSong(index) {
     "0%";
 
   music.load();
+
 }
 
 
-/* =========================
+/* =========================================
    播放歌曲
-========================= */
+========================================= */
 
 async function playMusic() {
 
@@ -1093,7 +1143,9 @@ async function playMusic() {
     musicBtn.textContent =
       "❚❚";
 
-  } catch (error) {
+  }
+
+  catch (error) {
 
     console.error(
       "音乐播放失败：",
@@ -1102,13 +1154,15 @@ async function playMusic() {
 
     musicBtn.textContent =
       "▶";
+
   }
+
 }
 
 
-/* =========================
+/* =========================================
    下一首
-========================= */
+========================================= */
 
 async function nextSong() {
 
@@ -1118,7 +1172,9 @@ async function nextSong() {
     currentSongIndex >=
     playlist.length
   ) {
+
     currentSongIndex = 0;
+
   }
 
   loadSong(
@@ -1126,12 +1182,13 @@ async function nextSong() {
   );
 
   await playMusic();
+
 }
 
 
-/* =========================
+/* =========================================
    上一首
-========================= */
+========================================= */
 
 async function previousSong() {
 
@@ -1140,8 +1197,10 @@ async function previousSong() {
   if (
     currentSongIndex < 0
   ) {
+
     currentSongIndex =
       playlist.length - 1;
+
   }
 
   loadSong(
@@ -1149,19 +1208,22 @@ async function previousSong() {
   );
 
   await playMusic();
+
 }
 
 
-/* 首次加载 */
+/* =========================================
+   首次加载
+========================================= */
 
 loadSong(
   currentSongIndex
 );
 
 
-/* =========================
+/* =========================================
    点击进入
-========================= */
+========================================= */
 
 enter.addEventListener(
   "click",
@@ -1177,9 +1239,9 @@ enter.addEventListener(
 );
 
 
-/* =========================
+/* =========================================
    播放 / 暂停
-========================= */
+========================================= */
 
 musicBtn.addEventListener(
   "click",
@@ -1189,21 +1251,24 @@ musicBtn.addEventListener(
 
       await playMusic();
 
-    } else {
+    }
+
+    else {
 
       music.pause();
 
       musicBtn.textContent =
         "▶";
+
     }
 
   }
 );
 
 
-/* =========================
-   上一首
-========================= */
+/* =========================================
+   上一首按钮
+========================================= */
 
 prevBtn.addEventListener(
   "click",
@@ -1215,9 +1280,9 @@ prevBtn.addEventListener(
 );
 
 
-/* =========================
-   下一首
-========================= */
+/* =========================================
+   下一首按钮
+========================================= */
 
 nextBtn.addEventListener(
   "click",
@@ -1229,9 +1294,9 @@ nextBtn.addEventListener(
 );
 
 
-/* =========================
-   歌曲结束自动下一首
-========================= */
+/* =========================================
+   播放结束自动下一首
+========================================= */
 
 music.addEventListener(
   "ended",
@@ -1243,9 +1308,9 @@ music.addEventListener(
 );
 
 
-/* =========================
-   音乐资料加载
-========================= */
+/* =========================================
+   读取歌曲长度
+========================================= */
 
 music.addEventListener(
   "loadedmetadata",
@@ -1260,9 +1325,9 @@ music.addEventListener(
 );
 
 
-/* =========================
-   音乐错误
-========================= */
+/* =========================================
+   音乐文件错误
+========================================= */
 
 music.addEventListener(
   "error",
@@ -1283,9 +1348,9 @@ music.addEventListener(
 );
 
 
-/* =========================
+/* =========================================
    音乐进度
-========================= */
+========================================= */
 
 music.addEventListener(
   "timeupdate",
@@ -1299,7 +1364,8 @@ music.addEventListener(
     if (
       Number.isFinite(
         music.duration
-      ) &&
+      )
+      &&
       music.duration > 0
     ) {
 
@@ -1316,27 +1382,31 @@ music.addEventListener(
         formatTime(
           music.duration
         );
+
     }
 
   }
 );
 
 
-/* =========================
-   点击进度条跳转
-========================= */
+/* =========================================
+   点击音乐进度条
+========================================= */
 
 progressBar.addEventListener(
   "click",
-  (event) => {
+  event => {
 
     if (
       !Number.isFinite(
         music.duration
-      ) ||
+      )
+      ||
       music.duration <= 0
     ) {
+
       return;
+
     }
 
     const rect =
@@ -1368,17 +1438,20 @@ progressBar.addEventListener(
 );
 
 
-/* =========================
+/* =========================================
    时间格式
-========================= */
+========================================= */
 
 function formatTime(seconds) {
 
   if (
-    !Number.isFinite(seconds) ||
+    !Number.isFinite(seconds)
+    ||
     seconds < 0
   ) {
+
     return "0:00";
+
   }
 
   const minutes =
@@ -1390,33 +1463,58 @@ function formatTime(seconds) {
     Math.floor(
       seconds % 60
     )
-      .toString()
-      .padStart(
-        2,
-        "0"
-      );
+    .toString()
+    .padStart(
+      2,
+      "0"
+    );
 
   return (
     minutes +
     ":" +
     secs
   );
+
 }
 
 
 /* =========================================
-   观看人数
-   基础人数：580
+   观看人数系统
+
+   基础观看人数：580
+
+   每打开网页：
+   +1
+
+   每刷新网页：
+   +1
+
+   CounterAPI 保存累计数量
 ========================================= */
 
 const BASE_VIEWS = 580;
 
-viewCount.textContent =
-  BASE_VIEWS.toLocaleString();
 
+/*
+  页面打开时先显示 ...
+  不直接重新显示 580
+*/
+
+viewCount.textContent =
+  "...";
+
+
+/*
+  /up 每请求一次
+  CounterAPI 就会 +1
+*/
 
 fetch(
-  "https://api.counterapi.dev/v1/c91_chris_profile/views/up"
+  "https://api.counterapi.dev/v1/c91_chris_profile/views/up",
+  {
+    method: "GET",
+    cache: "no-store"
+  }
 )
 
 .then(response => {
@@ -1424,7 +1522,7 @@ fetch(
   if (!response.ok) {
 
     throw new Error(
-      "Counter API HTTP " +
+      "Counter API HTTP Error: " +
       response.status
     );
 
@@ -1441,43 +1539,59 @@ fetch(
     data
   );
 
-  /*
-    CounterAPI 不同版本可能使用
-    count 或 value。
 
-    两个都尝试读取。
+  /*
+    CounterAPI 可能返回：
+
+    count
+    或
+    value
   */
 
   const rawCount =
     data.count ??
-    data.value ??
-    0;
+    data.value;
+
 
   const apiCount =
     Number(rawCount);
 
+
+  /*
+    防止出现 NaN
+  */
+
   if (
-    Number.isFinite(apiCount)
+    !Number.isFinite(apiCount)
   ) {
 
-    const total =
-      BASE_VIEWS +
-      apiCount;
-
-    viewCount.textContent =
-      total.toLocaleString();
-
-  } else {
-
-    console.warn(
-      "Counter API 返回的观看人数不是数字：",
-      rawCount
+    throw new Error(
+      "Counter API 返回的观看人数不是有效数字"
     );
 
-    viewCount.textContent =
-      BASE_VIEWS.toLocaleString();
-
   }
+
+
+  /*
+    580 + API 累计观看次数
+
+    API = 1
+    显示 581
+
+    API = 2
+    显示 582
+
+    API = 100
+    显示 680
+  */
+
+  const totalViews =
+    BASE_VIEWS +
+    apiCount;
+
+
+  viewCount.textContent =
+    totalViews.toLocaleString();
 
 })
 
@@ -1488,20 +1602,30 @@ fetch(
     error
   );
 
+
   /*
-    API 出问题时不会显示 NaN，
-    而是显示基础观看人数 580。
+    API 出错：
+
+    不显示 NaN
+    不重新显示 580
+
+    显示 —
   */
 
   viewCount.textContent =
-    BASE_VIEWS.toLocaleString();
+    "—";
 
 });
 
 
-/* =========================
+/* =========================================
+   观看人数系统结束
+========================================= */
+
+
+/* =========================================
    雪花
-========================= */
+========================================= */
 
 const canvas =
   document.getElementById(
@@ -1524,7 +1648,9 @@ function resizeSnow() {
 
 }
 
+
 resizeSnow();
+
 
 window.addEventListener(
   "resize",
@@ -1532,11 +1658,16 @@ window.addEventListener(
 );
 
 
-/* 产生雪花 */
+/* =========================================
+   创建雪花
+========================================= */
 
 const flakes =
   Array.from(
-    { length: 65 },
+    {
+      length: 65
+    },
+
     () => ({
 
       x:
@@ -1563,7 +1694,9 @@ const flakes =
   );
 
 
-/* 绘制雪花 */
+/* =========================================
+   绘制雪花
+========================================= */
 
 function drawSnow() {
 
@@ -1573,6 +1706,7 @@ function drawSnow() {
     canvas.width,
     canvas.height
   );
+
 
   ctx.fillStyle =
     "rgba(255,255,255,.76)";
@@ -1584,10 +1718,12 @@ function drawSnow() {
       flake.y +=
         flake.speed;
 
+
       flake.x +=
         Math.sin(
           flake.y * 0.018
-        ) *
+        )
+        *
         flake.drift;
 
 
@@ -1596,7 +1732,8 @@ function drawSnow() {
         canvas.height + 10
       ) {
 
-        flake.y = -10;
+        flake.y =
+          -10;
 
         flake.x =
           Math.random() *
@@ -1610,13 +1747,15 @@ function drawSnow() {
         canvas.width + 10
       ) {
 
-        flake.x = -10;
+        flake.x =
+          -10;
 
       }
 
 
       if (
-        flake.x < -10
+        flake.x <
+        -10
       ) {
 
         flake.x =
@@ -1627,6 +1766,7 @@ function drawSnow() {
 
       ctx.beginPath();
 
+
       ctx.arc(
         flake.x,
         flake.y,
@@ -1634,6 +1774,7 @@ function drawSnow() {
         0,
         Math.PI * 2
       );
+
 
       ctx.fill();
 
@@ -1647,12 +1788,13 @@ function drawSnow() {
 
 }
 
+
 drawSnow();
 
 
-/* =========================
+/* =========================================
    自定义鼠标
-========================= */
+========================================= */
 
 const customCursor =
   document.getElementById(
@@ -1665,22 +1807,27 @@ document.addEventListener(
   event => {
 
     customCursor.style.left =
-      event.clientX + "px";
+      event.clientX +
+      "px";
 
     customCursor.style.top =
-      event.clientY + "px";
+      event.clientY +
+      "px";
 
   }
 );
 
 
-/* 鼠标经过按钮放大 */
+/* =========================================
+   鼠标经过按钮
+========================================= */
 
 document
-  .querySelectorAll(
-    "a, button, .enter, .bar"
-  )
-  .forEach(item => {
+.querySelectorAll(
+  "a, button, .enter, .bar"
+)
+.forEach(
+  item => {
 
     item.addEventListener(
       "mouseenter",
@@ -1688,7 +1835,9 @@ document
 
         customCursor
           .classList
-          .add("active");
+          .add(
+            "active"
+          );
 
       }
     );
@@ -1700,13 +1849,20 @@ document
 
         customCursor
           .classList
-          .remove("active");
+          .remove(
+            "active"
+          );
 
       }
     );
 
-  });
+  }
+);
 
+
+/* =========================================
+   鼠标按下
+========================================= */
 
 document.addEventListener(
   "mousedown",
@@ -1714,11 +1870,17 @@ document.addEventListener(
 
     customCursor
       .classList
-      .add("active");
+      .add(
+        "active"
+      );
 
   }
 );
 
+
+/* =========================================
+   鼠标放开
+========================================= */
 
 document.addEventListener(
   "mouseup",
@@ -1726,15 +1888,17 @@ document.addEventListener(
 
     customCursor
       .classList
-      .remove("active");
+      .remove(
+        "active"
+      );
 
   }
 );
 
 
-/* =========================
+/* =========================================
    禁止右键
-========================= */
+========================================= */
 
 document.addEventListener(
   "contextmenu",
@@ -1746,9 +1910,15 @@ document.addEventListener(
 );
 
 
-/* =========================
+/* =========================================
    禁止部分快捷键
-========================= */
+
+   Ctrl + C
+   Ctrl + A
+   Ctrl + S
+   Ctrl + U
+   F12
+========================================= */
 
 document.addEventListener(
   "keydown",
@@ -1762,18 +1932,23 @@ document.addEventListener(
     if (
 
       (
-        event.ctrlKey &&
+        event.ctrlKey
+        &&
         [
           "c",
           "a",
           "s",
           "u"
-        ].includes(key)
+        ]
+        .includes(
+          key
+        )
       )
 
       ||
 
-      event.key === "F12"
+      event.key ===
+      "F12"
 
     ) {
 
@@ -1785,9 +1960,9 @@ document.addEventListener(
 );
 
 
-/* =========================
+/* =========================================
    禁止拖动图片
-========================= */
+========================================= */
 
 document.addEventListener(
   "dragstart",
@@ -1797,6 +1972,7 @@ document.addEventListener(
 
   }
 );
+
 
 </script>
 
